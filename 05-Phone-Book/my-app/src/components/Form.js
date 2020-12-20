@@ -28,8 +28,12 @@ export default class Form extends Component {
 
   sendForm(e) {
     e.preventDefault(); // Bu sayede sayfa yenilenmesi otamatik değil bizim kontrolümüzde olur
-    console.log("Form sending.......");
-    this.props.addContact({ ...this.state });
+    //Eğer inputlar boş ise listeye göndermiyor
+    if (this.state.text && this.state.phone) {
+      this.props.addContact({ ...this.state });
+    }
+    //inputları boşalt, state boş değer girersek imputlar boşalmış olur
+    this.setState({ text: "", phone: "" });
   }
 
   render() {
