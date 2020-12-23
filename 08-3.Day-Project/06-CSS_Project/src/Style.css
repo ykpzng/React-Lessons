@@ -1,0 +1,12 @@
+.parent {
+  background-color: rgb(75, 206, 162);
+}
+.title {
+  color: rgba(226, 15, 15, 0.945);
+}
+.child {
+  color: rgb(229, 163, 231);
+}
+p {
+  color: rgb(89, 113, 167);
+}

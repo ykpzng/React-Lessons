@@ -1,0 +1,15 @@
+.parent {
+  background-color: antiquewhite;
+}
+.title {
+  color: brown;
+}
+.child {
+  color: blue;
+}
+p {
+  color: cadetblue;
+}
+.parap {
+  color: fuchsia;
+}
