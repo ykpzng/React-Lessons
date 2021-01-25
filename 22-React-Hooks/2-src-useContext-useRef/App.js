@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import "./styles.css";
 import UserList from "./UserList";
 import { UserContext } from "./context/UserContext";
+import UseRefComp from "./useRefComp";
 
 //prettier-ignore
 const data = [
@@ -19,14 +20,18 @@ const App = () => {
     );
 
   return (
-    <UserContext.Provider value={{ changeColor, users }}>
-      <div className="App">
-        <header>
-          <h1>Welcome!</h1>
-        </header>
-        <UserList />
-      </div>
-    </UserContext.Provider>
+    // <UserContext.Provider value={{ changeColor, users }}>
+    //   <div className="App">
+    //     <header>
+    //       <h1>Welcome!</h1>
+    //     </header>
+    //     <UserList />
+    //   </div>
+    // </UserContext.Provider>
+    <div>
+      <UseRefComp />
+
+    </div>
   );
 };
 
@@ -37,10 +42,10 @@ export default App;
 // React Hooks
 // Hooks ta 5 adet keyword vardır;
 /*
-    //(1)-- useState     (state tanımlaması ve değiştirilmesi)
-    //(2)-- useEffect    (React Lifecycle işlemleri burada yapılır)
-    -- useContext
-    -- useRef
+    //(1)-- useState       (state tanımlaması ve değiştirilmesi)
+    //(2)-- useEffect      (React Lifecycle işlemleri burada yapılır)
+    -- useContext          (state taşıma işlemi)
+    -- useRef (createRef)  (Dom elemanlarına direk erişmek için)
     -- useReducer
 
 */
